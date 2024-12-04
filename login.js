@@ -18,19 +18,11 @@ signInBtn.addEventListener("click", (e) => {
   }
 
   signInWithEmailAndPassword(auth, loginEmail, loginPassword)
-    .then((userCredential) => {
-      const user = userCredential.user;
+    .then(() => {
       Swal.fire("Login successful!");
       logEmail.value = "";
       logPassword.value = "";
-      window.location.href = "dashboard.html";
-      
+      window.location.href = "index.html";
     })
-    .catch((error) => {
-      const errorMessage = error.message;
-      Swal.fire({
-        icon: "error",
-        text: `Error: ${errorMessage}`,
-      });
-    });
+    .catch((error) => Swal.fire({ icon: "error", text: error.message }));
 });
