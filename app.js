@@ -9,8 +9,6 @@ import {
   } from "./firebase.js";
   const auth = getAuth();
  
-  const googleBtn = document.getElementById("googleBtn");
- 
   const emailInput = document.getElementById("signup-email");
   const passwordInput = document.getElementById("signup-password");
   const signUpBtn = document.getElementById("signup");
